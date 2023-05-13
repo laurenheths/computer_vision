@@ -3,7 +3,6 @@ import random
 game_options = ["rock", "paper", "scissors"]
 
 def game():
-
     def get_computer_choice(game_options):
         computer_option = random.choice(game_options)
         return computer_option
@@ -14,8 +13,10 @@ def game():
     
     def get_winner(computer_option, user_option):
         if computer_option == 'rock' and user_option == 'scissors' or computer_option == "scissors" and user_option == 'paper' or computer_option == 'paper' and user_option == 'rock': 
+            computer_wins += 1
             print('You Lose')
         elif user_option == 'rock' and computer_option == 'scissors' or user_option == "scissors" and computer_option == 'paper' or user_option == 'paper' and computer_option == 'rock': 
+            user_wins += 1
             print('You win')
         elif user_option == computer_option: 
             print('it is a tie')
